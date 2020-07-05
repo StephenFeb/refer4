@@ -10,6 +10,17 @@ def new
     @job = Job.new
 end
 
+def create
+    @job = Job.new(job_params)
+
+    if @job.save
+      redirect_to job_path(@job)
+    else
+      flash[:alert] = "Something went wrong."
+      render :new
+    end
+end
+
 private
 
 def job_params
