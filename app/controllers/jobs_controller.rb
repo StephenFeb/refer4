@@ -21,6 +21,15 @@ def create
     end
 end
 
+def edit
+end
+
+def destroy
+  @job = Job.find(params[:id])
+  @job.destroy
+  redirect_to job_path, notice: 'Job was successfully deleted'
+end
+
 private
 
 def job_params
