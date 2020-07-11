@@ -10,6 +10,10 @@ def new
     @job = Job.new
 end
 
+def show
+  @job = Job.find(params[:id])
+end
+
 def create
     @job = Job.new(job_params)
 
@@ -22,6 +26,10 @@ def create
 end
 
 def edit
+  @job = Job.find(params[:id])
+end
+
+def update
 end
 
 def destroy

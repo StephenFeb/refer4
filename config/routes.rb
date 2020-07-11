@@ -11,4 +11,8 @@ Rails.application.routes.draw do
     resources :jobs
   end
 
+  resources :users do
+    resources :endorsements, only: [:new, :create, :destroy]
+  end
+
 end

@@ -1,0 +1,10 @@
+<h1>Organisations</h1>
+<% @organisations.each do |organisation| %>
+  <div class="job">
+    <h2><%= organisation.name %></h2>
+    <p><%= organisation.sector %></p>
+    <p><%= organisation.description %></p>
+    <p><%= organisation.culture %></p>
+  </div>
+<% end %>
+<p><%= link_to "Jobs", job_path %></p>
